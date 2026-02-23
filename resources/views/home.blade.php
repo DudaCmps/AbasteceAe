@@ -1,5 +1,5 @@
 <x-layout>
   <h1>
-    Oiii
+    Seja bem-vindo!
   </h1>
 </x-layout>

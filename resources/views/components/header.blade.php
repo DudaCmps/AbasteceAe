@@ -6,8 +6,7 @@
 
   {{-- LOGIN/REGISTRO--}}
   <div>
-    <a href="#">Login</a>
-    <a href="#">Registro</a>
+    <a href="{{ route('site.login') }}">Login</a>
   </div>
 </header>
 
