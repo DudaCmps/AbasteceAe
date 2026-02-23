@@ -50,8 +50,10 @@
           @enderror
         </div>
 
-        <div class="flex flex-row justify-between mb-2">
-          <div class="flex flex-col gap-2 mb-2">
+        {{-- DIV ENVELOPE--}}
+        <div class="flex flex-row justify-between gap-2 mb-2">
+
+          <div class="flex flex-col gap-2 mb-2 flex-1">
           <label for="matricula">
             Matrícula
           </label>
@@ -69,7 +71,7 @@
           @enderror
           </div>
 
-          <div class="flex flex-col gap-2 mb-2">
+          <div class="flex flex-col gap-2 mb-2 flex-1">
             <label for="cpf">
               CPF
             </label>
@@ -87,6 +89,8 @@
             @enderror
           </div>
         </div>
+        {{-- FIM DIV ENVELOPE--}}
+
 
         <div class="flex flex-col gap-2 mb-2">
           <label for="data_nasc">

@@ -17,7 +17,7 @@ return new class extends Migration
             $table->foreignId('modelo_id')->constrained()->onDelete('cascade');
             $table->string('tamanho_tanque');
             $table->date('ano');
-            $table->boolean('ativo');
+            $table->boolean('ativo')->default(true);
             $table->timestamps();
         });
     }

@@ -19,8 +19,8 @@ return new class extends Migration
             $table->string('matricula')->unique();
             $table->string('cpf')->unique();
             $table->date('data_nasc');
-            $table->boolean('ativo');
-            $table->string('perfil');
+            $table->boolean('ativo')->default(true);
+            $table->string('perfil')->default('user');
             $table->rememberToken();
             $table->timestamps();
         });
