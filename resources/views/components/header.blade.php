@@ -1,9 +1,10 @@
 <header class="bg-white border-b-2">
   {{-- HEADER --}}
   <div class="max-w-5/6 mx-auto flex items-center justify-between p-4">
-    <div class="habit-btn p-2 habit-shadow-lg">
+
+    <a href="/" class="habit-btn p-2 habit-shadow-lg">
       AbasteceAe
-    </div>
+    </a>
 
     {{-- LOGIN/REGISTRO--}}
     @auth
