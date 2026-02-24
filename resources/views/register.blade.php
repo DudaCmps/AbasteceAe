@@ -11,7 +11,7 @@
       <p>
         Preencha os campos abaixo para criar sua conta
       </p>
-      <form action="#" method="POST" class="flex flex-col">
+      <form action="{{ route('auth.register') }}" method="POST" class="flex flex-col">
         @csrf
 
         <div class="flex flex-col gap-2 mb-2">

@@ -9,11 +9,8 @@ Route::get('/', [SiteController::class, 'index']);
 
 Route::get('/login', [LoginController::class, 'login'])->name('site.login');
 Route::post('/login', [LoginController::class, 'authenticate'])->name('site.authenticate');
-
-
-
 Route::get('/registro', [RegisterController::class, 'register'])->name('site.register');
-
+Route::post('/registro', [RegisterController::class, 'store'])->name('auth.register');
 
 
 //AUTH - Rotas protegidas por autenticação

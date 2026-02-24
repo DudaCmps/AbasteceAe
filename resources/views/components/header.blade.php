@@ -25,7 +25,10 @@
     @endauth
 
     @guest
-      <a class="habit-btn p-2 habit-shadow-lg bg-white" href="{{ route('site.login') }}">Login</a>
+      <div>
+        <a class="habit-btn p-2 habit-shadow-lg bg-white" href="{{ route('site.login') }}">Login</a>
+        <a class="habit-btn p-2 habit-shadow-lg bg-white" href="{{ route('site.register') }}">Cadastre-se</a>
+      </div>
     @endguest
   </div>
 </header>
