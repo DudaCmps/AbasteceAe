@@ -5,8 +5,22 @@
   </div>
 
   {{-- LOGIN/REGISTRO--}}
-  <div class="habit-btn p-2 habit-shadow-lg">
-    <a href="{{ route('site.login') }}">Login</a>
-  </div>
+
+  @auth
+    <form
+      action="{{ route('auth.logout') }}"
+      method="POST"
+      class="inline">
+      @csrf
+
+      <button type="submit" class="habit-btn p-2 habit-shadow-lg bg-white">
+        Sair
+      </button>
+    </form>
+  @endauth
+
+  @guest
+    <a class="habit-btn p-2 habit-shadow-lg bg-white" href="{{ route('site.login') }}">Login</a>
+  @endguest
 </header>
 

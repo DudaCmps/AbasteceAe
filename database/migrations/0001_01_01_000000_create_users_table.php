@@ -16,10 +16,10 @@ return new class extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
-            $table->string('matricula')->unique();
+            $table->string('registration')->unique();
             $table->string('cpf')->unique();
-            $table->date('data_nasc');
-            $table->boolean('ativo')->default(true);
+            $table->date('date_of_birth');
+            $table->boolean('is_active')->default(true);
             $table->boolean('is_admin')->default(false);
             $table->timestamps();
         });

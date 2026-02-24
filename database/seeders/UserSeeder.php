@@ -16,9 +16,9 @@ class UserSeeder extends Seeder
            'name' => 'Maria',
             'email' => 'maria@gmail.com',
             'password' => '123456',
-            'matricula' => '12345-6',
+            'registration' => '12345-6',
             'cpf' => '12345678901',
-            'data_nasc' => '1990-01-01',
+            'date_of_birth' => '1990-01-01',
         ]);
     }
 }
