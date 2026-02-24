@@ -1,6 +1,5 @@
-<footer class="bg-v border-t-2 justify-center flex items-center p-1">
-  <p>
-    Criado por Duda Campos. O código ficará disponível no <a href="#" class="underline">GitHub</a>.
+<footer class="bg-white border-t-2 p-4">
+  <p class="text-center">
+    Criado por <a href="#" target="_blank" class="underline hover:text-habit-orange">Duda Campos</a>. O código-fonte está no <a href="#" target="_blank" class="underline hover:text-habit-orange">GitHub</a>
   </p>
 </footer>
-

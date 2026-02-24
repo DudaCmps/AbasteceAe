@@ -45,4 +45,9 @@ class LoginController extends Controller
         return redirect('/');
     }
 
+    public function dashboard()
+    {
+        return view('admin.dashboard');
+    }
+
 }

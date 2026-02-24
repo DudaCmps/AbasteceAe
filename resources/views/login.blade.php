@@ -1,6 +1,7 @@
 <x-layout>
 
-  <main class="py-10">
+
+  <main class="py-10 min-h-[calc(100vh-140px)]">
 
     <section class="bg-white max-w-150 mx-auto p-10 pb-6 mt-4 habit-shadow-lg">
 

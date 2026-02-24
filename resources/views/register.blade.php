@@ -2,7 +2,7 @@
 
   <main class="py-10">
 
-    <section class="bg-white max-w-150 mx-auto p-10 pb-6 border-2 mt-4">
+    <section class="bg-white max-w-150 mx-auto p-10 pb-5 border-2 mt-2">
 
       <h1 class="font-bold text-xl">
         Cadastre-se

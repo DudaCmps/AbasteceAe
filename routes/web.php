@@ -10,10 +10,18 @@ Route::get('/', [SiteController::class, 'index']);
 Route::get('/login', [LoginController::class, 'login'])->name('site.login');
 Route::post('/login', [LoginController::class, 'authenticate'])->name('site.authenticate');
 
-Route::post('/logout', [LoginController::class, 'logout'])->name('auth.logout');
+
 
 Route::get('/registro', [RegisterController::class, 'register'])->name('site.register');
 
-Route::get('admin/dashboard', function () {
-    return view('admin.dashboard');
-})->name('admin.dashboard')->middleware('auth');
+
+
+//AUTH - Rotas protegidas por autenticação
+Route::middleware('auth')->group(function () {
+
+    // Rota para o dashboard do admin
+    Route::get('admin/dashboard', [LoginController::class, 'dashboard'])->name('admin.dashboard');
+
+    // Rota para logout
+    Route::post('/logout', [LoginController::class, 'logout'])->name('auth.logout');
+});
