@@ -13,3 +13,7 @@ Route::post('/login', [LoginController::class, 'authenticate'])->name('site.auth
 Route::post('/logout', [LoginController::class, 'logout'])->name('auth.logout');
 
 Route::get('/registro', [RegisterController::class, 'register'])->name('site.register');
+
+Route::get('admin/dashboard', function () {
+    return view('admin.dashboard');
+})->name('admin.dashboard')->middleware('auth');

@@ -15,18 +15,24 @@ class LoginController extends Controller
     {
         return view('login');
     }
+
     public function authenticate(LoginRequest $request)
     {
         $credentials = $request->only('email', 'password');
 
-        if(Auth::attempt($credentials)) {
-            $request->session()->regenerate();
-            return redirect()->intended('/');
+        if (! Auth::attempt($credentials)) {
+            return back()->withErrors([
+                'email' => 'Credenciais inválidas.',
+            ]);
         }
 
-        return back()->withErrors([
-            'email' => 'Credenciais inválidas.',
-        ]);
+        $request->session()->regenerate();
+
+        if(auth()->user()->is_admin) {
+            return redirect()->route('admin.dashboard');
+        }
+
+        return redirect()->intended('/');
     }
 
     public function logout(Request $request): RedirectResponse

@@ -30,6 +30,7 @@ class UserFactory extends Factory
             'registration' => fake()->unique()->numerify('#####-#'),
             'cpf' => fake()->unique()->numerify('###########'),
             'date_of_birth' => fake()->date(),
+            'is_admin' => fake()->boolean(0), // 0% chance of being an admin
         ];
     }
 
