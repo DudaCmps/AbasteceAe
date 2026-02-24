@@ -8,6 +8,11 @@ use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
+
+    public function login()
+    {
+        return view('login');
+    }
     public function authenticate(LoginRequest $request)
     {
         $credentials = $request->only('email', 'password');
@@ -21,4 +26,5 @@ class LoginController extends Controller
             'email' => 'Credenciais inválidas.',
         ])->onlyInput('email');
     }
+
 }
