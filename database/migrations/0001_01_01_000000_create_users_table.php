@@ -20,8 +20,7 @@ return new class extends Migration
             $table->string('cpf')->unique();
             $table->date('data_nasc');
             $table->boolean('ativo')->default(true);
-            $table->string('perfil')->default('user');
-            $table->rememberToken();
+            $table->boolean('is_admin')->default(false);
             $table->timestamps();
         });
 
