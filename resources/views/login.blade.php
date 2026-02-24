@@ -12,7 +12,7 @@
         Insira seus dados para acessar
       </p>
       <form
-        action="#"
+        action="{{ route('site.authenticate') }}"
         method="POST"
         class="flex flex-col">
         @csrf
@@ -44,14 +44,8 @@
             type="password"
             name="password"
             placeholder="********"
-            class="bg-white p-2 habit-shadow @error('password') border-red-600 @enderror"
+            class="bg-white p-2 habit-shadow"
           >
-
-          @error('password')
-          <p class="text-red-600">
-            {{ $message }}
-          </p>
-          @enderror
         </div>
 
         <button type="submit" class="habit-btn bg-habit-orange p-2 habit-shadow-lg text-white">

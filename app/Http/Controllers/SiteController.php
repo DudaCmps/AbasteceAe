@@ -21,4 +21,6 @@ class SiteController extends Controller
     {
         return view('register');
     }
+
+
 }
