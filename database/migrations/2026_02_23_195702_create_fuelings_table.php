@@ -11,21 +11,20 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('veiculos', function (Blueprint $table) {
+        Schema::create('fuelings', function (Blueprint $table) {
             $table->id();
-            $table->string('placa')->unique();
-            $table->foreignId('modelo_id')->constrained()->onDelete('cascade');
-            $table->string('tamanho_tanque');
-            $table->date('ano');
-            $table->boolean('ativo')->default(true);
+            $table->foreignId('user_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('vehicle_id')->constrained()->cascadeOnDelete();
+            $table->decimal('fuel_liters', 8, 2);
             $table->timestamps();
         });
     }
+
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::dropIfExists('veiculos');
+        Schema::dropIfExists('fuelings');
     }
 };

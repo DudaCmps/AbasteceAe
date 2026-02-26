@@ -32,7 +32,7 @@ class LoginController extends Controller
             return redirect()->route('admin.dashboard');
         }
 
-        return redirect()->intended('/');
+        return redirect()->route('site.index');
     }
 
     public function logout(Request $request): RedirectResponse

@@ -54,17 +54,17 @@
         <div class="flex flex-row justify-between gap-2 mb-2">
 
           <div class="flex flex-col gap-2 mb-2 flex-1">
-          <label for="matricula">
+          <label for="registration">
             Matrícula
           </label>
           <input
             type="text"
-            name="matricula"
+            name="registration"
             placeholder="30127-2"
-            class="bg-white p-2 border-2 @error('matricula') border-red-600 @enderror"
+            class="bg-white p-2 border-2 @error('registration') border-red-600 @enderror"
           >
 
-          @error('matricula')
+          @error('registration')
           <p class="text-red-600">
             {{ $message }}
           </p>
@@ -93,17 +93,17 @@
 
 
         <div class="flex flex-col gap-2 mb-2">
-          <label for="data_nasc">
+          <label for="date_of_birth">
             Data de Nascimento
           </label>
           <input
             type="date"
-            name="data_nasc"
+            name="date_of_birth"
             placeholder="example@email.com"
-            class="bg-white p-2 border-2 @error('data_nasc') border-red-600 @enderror"
+            class="bg-white p-2 border-2 @error('date_of_birth') border-red-600 @enderror"
           >
 
-          @error('data_nasc')
+          @error('date_of_birth')
           <p class="text-red-600">
             {{ $message }}
           </p>

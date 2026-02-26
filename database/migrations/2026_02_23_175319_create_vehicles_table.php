@@ -11,18 +11,21 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('marcas', function (Blueprint $table) {
+        Schema::create('vehicles', function (Blueprint $table) {
             $table->id();
-            $table->string('nome')->unique();
+            $table->string('license_plate')->unique();
+            $table->foreignId('model_id')->constrained()->cascadeOnDelete();
+            $table->integer('tank_size');
+            $table->year('manufacture_year');
+            $table->boolean('is_active')->default(true);
             $table->timestamps();
         });
     }
-
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::dropIfExists('marcas');
+        Schema::dropIfExists('vehicles');
     }
 };
