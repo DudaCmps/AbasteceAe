@@ -49,7 +49,7 @@
           >
         </div>
 
-        <button type="submit" class="habit-btn bg-habit-orange p-2 habit-shadow-lg text-white">
+        <button type="submit" class="habit-btn bg-habit-temp p-2 habit-shadow-lg text-white">
           Entrar
         </button>
       </form>

@@ -16,7 +16,7 @@
       </p>
     @endguest
 
-    <a class="habit-btn bg-habit-orange px-8 py-2 mt-8 habit-shadow-lg text-white" href="{{ route('site.login') }}">
+    <a class="habit-btn bg-habit-temp px-8 py-2 mt-8 habit-shadow-lg text-white" href="{{ route('site.login') }}">
       Começar agora
     </a>
 
