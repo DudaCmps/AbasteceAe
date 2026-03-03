@@ -10,9 +10,9 @@
   --font-mono: 'IBM Plex Mono', monospace;
 }
 
-.bg-body{
-  background-color: #F5F5F5;
-}
+/** {*/
+/*  outline: 2px solid red !important;*/
+/*}*/
 
 .habit-btn {
   font-weight: 700;
