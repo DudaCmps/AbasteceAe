@@ -10,38 +10,38 @@
   <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link active bg-gradient-dark text-white" href="../pages/dashboard.html">
+        <a class="nav-link {{ request()->routeIs('admin.dashboard') ? 'active bg-gradient-dark text-white' : 'text-dark' }}" href="{{ route('admin.dashboard') }}">
           <i class="material-symbols-rounded opacity-5">dashboard</i>
           <span class="nav-link-text ms-1">Dashboard</span>
         </a>
       </li>
       <li class="nav-item">
-{{--        {{ route('admin.tables') }}--}}
-        <a class="nav-link text-dark" href="">
+
+        <a class="nav-link {{ request()->routeIs('admin.tables') ? 'active bg-gradient-dark text-white' : 'text-dark' }}" href="{{ route('admin.tables') }}">
           <i class="material-symbols-rounded opacity-5">table_view</i>
           <span class="nav-link-text ms-1">Tables</span>
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-dark" href="../pages/billing.html">
+        <a class="nav-link {{ request()->routeIs('admin.vehicles') ? 'active bg-gradient-dark text-white' : 'text-dark' }}" href="{{ route('admin.vehicles') }}">
           <i class="material-symbols-rounded opacity-5">directions_car</i>
           <span class="nav-link-text ms-1">Vehicles</span>
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-dark" href="../pages/virtual-reality.html">
+        <a class="nav-link {{ request()->routeIs('#') ? 'active bg-gradient-dark text-white' : 'text-dark' }}" href="#">
           <i class="material-symbols-rounded opacity-5">local_gas_station</i>
           <span class="nav-link-text ms-1">Gas Pumps</span>
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-dark" href="../pages/rtl.html">
+        <a class="nav-link {{ request()->routeIs('#') ? 'active bg-gradient-dark text-white' : 'text-dark' }}" href="#">
           <i class="material-symbols-rounded opacity-5">oil_barrel</i>
           <span class="nav-link-text ms-1">Fuelings</span>
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-dark" href="../pages/notifications.html">
+        <a class="nav-link {{ request()->routeIs('#') ? 'active bg-gradient-dark text-white' : 'text-dark' }}" href="#">
           <i class="material-symbols-rounded opacity-5">notifications</i>
           <span class="nav-link-text ms-1">Notifications</span>
         </a>
@@ -50,7 +50,7 @@
         <h6 class="ps-4 ms-2 text-uppercase text-xs text-dark font-weight-bolder opacity-5">Account</h6>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-dark" href="../pages/profile.html">
+        <a class="nav-link {{ request()->routeIs('#') ? 'active bg-gradient-dark text-white' : 'text-dark' }}" href="#">
           <i class="material-symbols-rounded opacity-5">person</i>
           <span class="nav-link-text ms-1">Profile</span>
         </a>

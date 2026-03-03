@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\SiteController;
 use Illuminate\Support\Facades\Route;
 
@@ -24,6 +25,9 @@ Route::middleware('auth')->group(function () {
 
         // Rota para o dashboard do admin
         Route::get('admin/dashboard', [LoginController::class, 'dashboard'])->name('admin.dashboard');
+
+        Route::get('admin/clientes', [DashboardController::class, 'tables'])->name('admin.tables');
+        Route::get('admin/veiculos', [DashboardController::class, 'vehicles'])->name('admin.vehicles');
     });
 });
 

@@ -14,12 +14,12 @@
     @vite('resources/css/app.css')
   </head>
 
-  <x-header/>
+  <x-user.header/>
 
   <body class="bg-blue-50 font-mono">
    {{ $slot }}
   </body>
 
-  <x-footer/>
+  <x-user.footer/>
 
 </html>

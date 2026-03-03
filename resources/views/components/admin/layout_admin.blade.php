@@ -23,16 +23,18 @@
   <!-- CSS Files -->
   <link id="pagestyle" href="/../assets/css/material-dashboard.css?v=3.2.0" rel="stylesheet" />
 
-{{--  @vite('resources/css/app.css')--}}
+  @vite('resources/css/app.css')
 </head>
 
-  <x-aside_admin/>
+  <body class="font-mono">
 
-  <body class="bg-blue-50 font-mono">
+  <x-admin.aside_admin/>
     <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
-      <x-header_admin/>
-      {{ $slot }}
-      <x-footer_admin/>
+      <x-admin.header_admin/>
+
+        {{ $slot }}
+
+      <x-admin.footer_admin/>
     </main>
   </body>
 </html>
