@@ -16,9 +16,16 @@ Route::post('/registro', [RegisterController::class, 'store'])->name('auth.regis
 //AUTH - Rotas protegidas por autenticação
 Route::middleware('auth')->group(function () {
 
-    // Rota para o dashboard do admin
-    Route::get('admin/dashboard', [LoginController::class, 'dashboard'])->name('admin.dashboard');
-
     // Rota para logout
     Route::post('/logout', [LoginController::class, 'logout'])->name('auth.logout');
+
+    //Rota que apenas o admin pode acessar
+    Route::middleware(['auth', 'can:access-is_admin'])->group(function () {
+
+        // Rota para o dashboard do admin
+        Route::get('admin/dashboard', [LoginController::class, 'dashboard'])->name('admin.dashboard');
+    });
 });
+
+
+
