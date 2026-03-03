@@ -4,7 +4,7 @@
       <div class="">
         <h3 class="mb-0 h4 font-weight-bolder">Dashboard</h3>
         <p class="mb-4">
-          Check the sales, value and bounce rate by country.
+          Verifique o desempenho geral em um relance, com métricas e gráficos fáceis de entender.
         </p>
       </div>
       <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
