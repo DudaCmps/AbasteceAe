@@ -1,4 +1,4 @@
-<x-layout>
+<x-user.layout>
 
 
   <main class="py-10 min-h-[calc(100vh-140px)]">
@@ -63,4 +63,4 @@
 
     </section>
   </main>
-</x-layout>
+</x-user.layout>

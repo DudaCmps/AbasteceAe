@@ -1,4 +1,4 @@
-<x-layout>
+<x-user.layout>
   <main class="flex items-center flex-col mx-auto py-10 min-h-[calc(100vh-140px)] px-4">
     <h1 class="text-5xl text-center mt-32 p-4 max-w-6xl font-bold leading-relaxed">
       O melhor sistema de abastecimento de veículos para a sua empresa!
@@ -21,4 +21,4 @@
     </a>
 
   </main>
-</x-layout>
+</x-user.layout>

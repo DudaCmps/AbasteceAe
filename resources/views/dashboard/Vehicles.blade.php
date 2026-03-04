@@ -2,7 +2,7 @@
   <div class="container-fluid py-2 mt-4">
     <div class="row justify-content-around"> <!-- g-4 adiciona espaçamento entre colunas e linhas -->
 
-      <!-- Card 1 -->
+      <!-- Card 1 principal -->
       <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
         <div class="card w-100">
           <!-- Cabeçalho do card -->
@@ -18,7 +18,7 @@
         </div>
       </div>
 
-      <!-- Card 2 -->
+      <!-- Card 2 segundo-->
       <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
         <div class="card w-100">
           <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
@@ -32,7 +32,7 @@
         </div>
       </div>
 
-      <!-- Card 3 -->
+      <!-- Card 3 terceiro -->
       <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
         <div class="card w-100">
           <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
@@ -47,7 +47,7 @@
       </div>
 
 
-      <!-- Card 3 -->
+      <!-- Card 3 quarto -->
       <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
         <div class="card w-100">
           <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
