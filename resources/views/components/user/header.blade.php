@@ -20,13 +20,13 @@
             Sair
           </button>
         </form>
-        </div>
+      </div>
     @endauth
 
     @guest
       <div>
-        <a class="p-2 bg-white" href="{{ route('site.login') }}">Login</a>
-        <a class="" href="{{ route('site.register') }}">Cadastre-se</a>
+        <a class="btn btn-light px-5 mb-0 py-2 border" href="{{ route('site.login') }}">Login</a>
+        <a class="btn btn-dark px-5 mb-0 py-2 border" href="{{ route('site.register') }}">Cadastre-se</a>
       </div>
     @endguest
   </div>

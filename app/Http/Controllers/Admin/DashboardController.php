@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 
@@ -10,7 +11,11 @@ class DashboardController extends Controller
 
     public function tables()
     {
-        return view('dashboard.tables');
+        $users = User::all();
+
+//        dd($users);
+
+        return view('dashboard.tables', compact('users'));
     }
 
     public function vehicles()

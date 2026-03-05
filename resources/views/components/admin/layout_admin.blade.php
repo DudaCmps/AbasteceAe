@@ -26,7 +26,7 @@
   @vite('resources/css/app.css')
 </head>
 
-  <body class="font-mono">
+  <body class="bg-dashboard">
 
   <x-admin.aside_admin/>
     <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">

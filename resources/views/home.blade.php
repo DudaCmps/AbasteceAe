@@ -11,7 +11,7 @@
     @endauth
 
     @guest
-      <p class="text-center mt-4 text-lg max-w-5xl">
+      <p class=" text-lg max-w-5xl text-grey lh-extra fw-lighter">
         Faça login para acessar o sistema e gerenciar o abastecimento de veículos da sua empresa de forma eficiente.
       </p>
     @endguest

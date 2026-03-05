@@ -24,6 +24,56 @@
   color: #cbcbcb;
 }
 
+
+.bg-dashboard {
+  background-color: #F5F5F5;
+}
+
+.avatar-radius {
+  border-radius: 50%;
+  width: 90px;
+  transform: translateY(-30px);
+}
+
+.label-dash{
+  align-self: center;
+  margin-bottom: 0 !important;
+  color: black !important;
+  /*font-weight: bold !important;*/
+}
+
+.form-novo {
+  border: 1px solid lightgray !important;
+  border-radius: 0.375rem !important;
+  height: 35px !important;
+  padding: 0 10px !important;
+}
+
+.form-row-custom {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  width: 100% !important;
+}
+
+.input-nome {
+  flex: 3 !important;
+}
+
+.input-cpf {
+  flex: 1 !important;
+}
+
+.input-email {
+  flex: 2.5 !important;
+
+}
+
+.input-matricula {
+  flex: 1.5 !important;
+  max-width: 150px !important;
+}
+
 /** {*/
 /*  outline: 2px solid red !important;*/
 /*}*/

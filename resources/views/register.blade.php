@@ -1,4 +1,4 @@
-<x-layout>
+<x-user.layout>
 
   <main class="py-10">
 
@@ -162,4 +162,4 @@
 
     </section>
   </main>
-</x-layout>
+</x-user.layout>
