@@ -51,7 +51,7 @@
                       <span class="text-secondary text-xs font-weight-bold">{{ $user->date_of_birth}}</span>
                     </td>
                     <td class="align-middle">
-                      <a class="pointer text-secondary font-weight-bold text-xs" data-bs-toggle="modal" data-bs-target="#modal-edit-user">
+                      <a class="pointer text-secondary font-weight-bold text-xs" data-bs-toggle="modal" data-bs-target="#modal-edit-user" onclick="updateUser({{$user->id}})">
                         Edit
                       </a>
                     </td>
@@ -73,15 +73,23 @@
 
   </div>
   <div class="modal fade modal-lg " id="modal-edit-user" tabindex="-1">
-
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
-          <div class="bg-gradient-dark shadow-dark border-radius-lg pt-4 pb-3 d-flex  justify-content-end">
-            <button type="button" class="btn-close pe-4" data-bs-dismiss="modal"></button>
+          <div class="bg-gradient-dark shadow-dark border-radius-lg  d-flex  justify-content-between">
+{{--            pt-4 pb-3--}}
+            <img src="../assets/img/team-1.jpg" class="avatar-radius ms-3" alt="user1">
+{{--            <button type="button" class="btn-close pe-4 align-self-center" data-bs-dismiss="modal"></button>--}}
           </div>
-            <img src="../assets/img/team-3.jpg" class="avatar-radius ms-3" alt="user1">
-          <p></p>
+        </div>
+
+        <div class="modal-header ">
+          <div class="d-flex flex-column align-items-start ms-3 mt-3">
+            <h4 class="text-lg mb-0" id="name_text"></h4>
+            <p class="text-xs text-secondary mb-0" id="email_text">
+
+            </p>
+          </div>
         </div>
 
         <div class="modal-body ms-3">
@@ -89,44 +97,72 @@
 
             <div class="form-row-custom my-3">
               <label class="label-dash">Nome</label>
-              <input type="text" class="form-novo input-nome">
+              <input type="text"
+                     id="name"
+                     name="name"
+                     class="form-novo input-nome"
+                     placeholder="Nome completo">
 
               <label class="label-dash ms-3">CPF</label>
-              <input type="text" class="form-novo input-cpf">
+              <input type="text"
+                     id="cpf"
+                     name="cpf"
+                     class="form-novo input-cpf"
+                     placeholder="000.000.000-00">
             </div>
 
             <div class="form-row-custom my-3">
               <label class="label-dash">Email</label>
-              <input type="text" class="form-novo input-email">
+              <input type="text"
+                     id="email"
+                     name="email"
+                     class="form-novo input-email"
+                     placeholder="exemplo@gmail.com">
 
               <label class="label-dash ms-3">Matrícula</label>
-              <input type="text" class="form-novo input-matricula">
+              <input type="text"
+                     id="registraton"
+                     name="registration"
+                     class="form-novo input-matricula"
+                     placeholder="00000-0">
             </div>
 
             <div class="form-row-custom my-3">
               <label class="label-dash">Nascimento</label>
-              <input type="date" class="form-novo input-cpf">
+              <input type="date"
+                     id="nasc"
+                     name="nasc"
+                     class="form-novo input-cpf"
+                     placeholder="00/00/0000">
 
               <label class="label-dash ms-3">Senha</label>
-              <input type="text" class="form-novo input-email">
+              <input type="text"
+                     id="password"
+                     name="password"
+                     placeholder="******"
+                     class="form-novo input-email">
             </div>
 
             <div class="form-row-custom my-3">
               <label class="label-dash">Status</label>
-
-            </div>
-
-            <div class="text-center">
-              <button type="button" class="btn bg-gradient-dark w-100 my-4 mb-2">
-                Sign in
-              </button>
+              <label class="switch mb-0">
+                <input type="checkbox" id="is_active" name="is_active">
+                <span class="slider"></span>
+              </label>
             </div>
 
           </form>
         </div>
 
-        <div class="modal-footer">
-          <button class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+
+        <div class="modal-footer justify-content-between">
+          <div>
+            <button class="btn btn-outline-danger">Excluir Colaborador</button>
+          </div>
+          <div class="d-flex gap-2">
+            <button class=" btn btn-ligt-adapt text-dark border border-dark" data-bs-dismiss="modal">Cancelar</button>
+            <button class="btn btn-dark" data-bs-dismiss="modal">Salvar Mudanças</button>
+          </div>
         </div>
 
       </div>

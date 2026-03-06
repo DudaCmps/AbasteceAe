@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Models\User;
 use Illuminate\Http\Request;
-use Illuminate\Routing\Controller;
+use App\Http\Controllers\Controller;
 
 class DashboardController extends Controller
 {
@@ -23,4 +23,10 @@ class DashboardController extends Controller
         return view('dashboard.vehicles');
     }
 
+    public function getUser($id)
+    {
+        $user = User::find($id);
+
+        return response()->json($user);
+    }
 }

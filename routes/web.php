@@ -28,6 +28,8 @@ Route::middleware('auth')->group(function () {
 
         Route::get('admin/clientes', [DashboardController::class, 'tables'])->name('admin.tables');
         Route::get('admin/veiculos', [DashboardController::class, 'vehicles'])->name('admin.vehicles');
+
+        Route::get('admin/dashboard/{id}', [DashboardController::class, 'getUser']);
     });
 });
 

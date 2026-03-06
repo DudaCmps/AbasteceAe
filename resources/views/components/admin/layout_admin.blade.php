@@ -23,6 +23,8 @@
   <!-- CSS Files -->
   <link id="pagestyle" href="/../assets/css/material-dashboard.css?v=3.2.0" rel="stylesheet" />
 
+  <script src="{{ asset('assets/js/update.js') }}"></script>
+
   @vite('resources/css/app.css')
 </head>
 
