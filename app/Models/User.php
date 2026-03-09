@@ -4,10 +4,11 @@ namespace App\Models;
 
 use Database\Factories\UserFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
-class User extends Authenticatable
+class User extends Model
 {
     /** @use HasFactory<UserFactory> */
     use HasFactory, Notifiable;
@@ -36,8 +37,6 @@ class User extends Authenticatable
 
     ];
 
-
-
     /**
      * Get the attributes that should be cast.
      *
@@ -48,5 +47,11 @@ class User extends Authenticatable
         return [
             'password' => 'hashed',
         ];
+    }
+
+
+    public function enderecos()
+    {
+        return $this->hasMany('App\Models\Endereco');
     }
 }
