@@ -28,14 +28,17 @@ Route::middleware('auth')->group(function () {
         // Rota para o dashboard do admin
         Route::get('admin/dashboard', [LoginController::class, 'dashboard'])->name('admin.dashboard');
 
+        // Rota para listar os clientes e veículos
         Route::get('admin/clientes', [UserController::class, 'index'])->name('admin.tables');
         Route::get('admin/veiculos', [DashboardController::class, 'vehicles'])->name('admin.vehicles');
 
         // Rota para obter os dados do usuário
-        Route::get('admin/dashboard/{id}', [UserController::class, 'getUser']);
+        Route::get('admin/dashboard/{id}/editar', [UserController::class, 'show']);
 
         // Rota para obter os endereços do usuário
         Route::get('admin/dashboard/{id}/enderecos', [EnderecoController::class, 'getAddresses']);
+
+        Route::post('admin/dashboard/{id}/editar', [UserController::class, 'update'])->name('admin.update');
     });
 });
 

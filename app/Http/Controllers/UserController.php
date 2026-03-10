@@ -17,21 +17,6 @@ class UserController extends Controller
         return view('dashboard.tables', compact('users'));
     }
 
-    public function getUser($id)
-    {
-        $user = User::find($id);
-
-        return response()->json($user);
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
     /**
      * Store a newly created resource in storage.
      */
@@ -43,25 +28,19 @@ class UserController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(User $user)
+    public function show($id)
     {
-        //
-    }
+        $user = User::find($id);
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(User $user)
-    {
-        //
+        return response()->json($user);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, User $user)
+    public function update(UserRequest $request)
     {
-        //
+        dd($request);
     }
 
     /**
