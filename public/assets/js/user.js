@@ -1,4 +1,4 @@
-function updateUser(id){
+function getUser(id){
 
     $.ajax({
         url: '/admin/dashboard/' + id,
@@ -12,10 +12,27 @@ function updateUser(id){
           $('#is_active').prop('checked', result.is_active == 1);
           $('#name_text').text(result.name);
           $('#email_text').text(result.email);
+
+          console.log(result);
         },
       error: function(result){
           console.log('olha o Gustavo Lima ai');
       }
     })
 
+}
+function getAddresses(id){
+
+  $.ajax({
+    url: '/admin/dashboard/' + id + '/enderecos',
+    type: 'GET',
+    success: function(result) {
+
+      $('#edit_name_text').text(result.user.name);
+      $('#edit_email_text').text(result.user.email);
+
+
+
+    }
+  })
 }

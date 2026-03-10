@@ -71,44 +71,44 @@
           @enderror
           </div>
 
-          <div class="flex flex-col gap-2 mb-2 flex-1">
-            <label for="cpf">
-              CPF
-            </label>
-            <input
-              type="text"
-              name="cpf"
-              placeholder="000000000-00"
-              class="bg-white p-2 border-2 @error('cpf') border-red-600 @enderror"
-            >
+{{--          <div class="flex flex-col gap-2 mb-2 flex-1">--}}
+{{--            <label for="cpf">--}}
+{{--              CPF--}}
+{{--            </label>--}}
+{{--            <input--}}
+{{--              type="text"--}}
+{{--              name="cpf"--}}
+{{--              placeholder="000000000-00"--}}
+{{--              class="bg-white p-2 border-2 @error('cpf') border-red-600 @enderror"--}}
+{{--            >--}}
 
-            @error('cpf')
-            <p class="text-red-600">
-              {{ $message }}
-            </p>
-            @enderror
-          </div>
-        </div>
-        {{-- FIM DIV ENVELOPE--}}
+{{--            @error('cpf')--}}
+{{--            <p class="text-red-600">--}}
+{{--              {{ $message }}--}}
+{{--            </p>--}}
+{{--            @enderror--}}
+{{--          </div>--}}
+{{--        </div>--}}
+{{--        --}}{{-- FIM DIV ENVELOPE--}}
 
 
-        <div class="flex flex-col gap-2 mb-2">
-          <label for="date_of_birth">
-            Data de Nascimento
-          </label>
-          <input
-            type="date"
-            name="date_of_birth"
-            placeholder="example@email.com"
-            class="bg-white p-2 border-2 @error('date_of_birth') border-red-600 @enderror"
-          >
+{{--        <div class="flex flex-col gap-2 mb-2">--}}
+{{--          <label for="date_of_birth">--}}
+{{--            Data de Nascimento--}}
+{{--          </label>--}}
+{{--          <input--}}
+{{--            type="date"--}}
+{{--            name="date_of_birth"--}}
+{{--            placeholder="example@email.com"--}}
+{{--            class="bg-white p-2 border-2 @error('date_of_birth') border-red-600 @enderror"--}}
+{{--          >--}}
 
-          @error('date_of_birth')
-          <p class="text-red-600">
-            {{ $message }}
-          </p>
-          @enderror
-        </div>
+{{--          @error('date_of_birth')--}}
+{{--          <p class="text-red-600">--}}
+{{--            {{ $message }}--}}
+{{--          </p>--}}
+{{--          @enderror--}}
+{{--        </div>--}}
 
         <div class="flex flex-col gap-2 mb-4">
 
@@ -151,6 +151,7 @@
         <button type="submit" class="cursor-pointer bg-white p-2 border-2">
           Cadastrar
         </button>
+
       </form>
 
       <p class="text-center mt-4">

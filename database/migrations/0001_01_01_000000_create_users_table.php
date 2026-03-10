@@ -17,8 +17,8 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->string('registration')->unique();
-            $table->string('cpf')->unique();
-            $table->date('date_of_birth');
+            $table->string('cpf')->unique()->nullable();
+            $table->date('date_of_birth')->nullable();
             $table->boolean('is_active')->default(true);
             $table->boolean('is_admin')->default(false);
             $table->timestamps();

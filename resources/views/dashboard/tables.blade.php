@@ -23,8 +23,8 @@
                 </tr>
                 </thead>
                 <tbody>
-                @forelse($users as $user)
 
+                @forelse($users as $user)
                   <tr>
                     <td>
                       <div class="d-flex px-2 py-1">
@@ -52,15 +52,14 @@
                       <span class="text-secondary text-xs font-weight-bold">{{ $user->date_of_birth}}</span>
                     </td>
                     <td class="align-middle">
-                      <a class="cursor-pointer text-secondary font-weight-bold text-xs" data-bs-toggle="modal" data-bs-target="#modal-edit-user" onclick="updateUser({{$user->id}})">
+                      <a class="cursor-pointer text-secondary font-weight-bold text-xs" data-bs-toggle="modal" data-bs-target="#modal-edit-user" onclick="getUser({{$user->id}})">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#737373" viewBox="0 0 256 256"><path d="M227.31,73.37,182.63,28.68a16,16,0,0,0-22.63,0L36.69,152A15.86,15.86,0,0,0,32,163.31V208a16,16,0,0,0,16,16H92.69A15.86,15.86,0,0,0,104,219.31L227.31,96a16,16,0,0,0,0-22.63ZM92.69,208H48V163.31l88-88L180.69,120ZM192,108.68,147.31,64l24-24L216,84.68Z"></path></svg>
                       </a>
-                      <a class="cursor-pointer text-secondary font-weight-bold text-xs ms-2 " data-bs-toggle="modal" data-bs-target="#modal-address-user" onclick="addressUser({{$user->id}})">
+                      <a class="cursor-pointer text-secondary font-weight-bold text-xs ms-2 " data-bs-toggle="modal" data-bs-target="#modal-address-user"onclick="getAddresses({{$user->id}})">
                         <svg class="mb-1" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#737373" viewBox="0 0 256 256"><path d="M219.31,108.68l-80-80a16,16,0,0,0-22.62,0l-80,80A15.87,15.87,0,0,0,32,120v96a8,8,0,0,0,8,8h64a8,8,0,0,0,8-8V160h32v56a8,8,0,0,0,8,8h64a8,8,0,0,0,8-8V120A15.87,15.87,0,0,0,219.31,108.68ZM208,208H160V152a8,8,0,0,0-8-8H104a8,8,0,0,0-8,8v56H48V120l80-80,80,80Z"></path></svg>
                       </a>
                     </td>
                   </tr>
-
                 @empty
                   <tr>
                     <p>Não há colaboradores cadastrados no momento.</p>
@@ -187,10 +186,8 @@
 
         <div class="modal-header ">
           <div class="d-flex flex-column align-items-start ms-3 mt-3">
-            <h4 class="text-lg mb-0" id="name_text">Maria</h4>
-            <p class="text-xs text-secondary mb-0" id="email_text">
-              maria@gmail.com
-            </p>
+            <h4 class="text-lg mb-0" id="edit_name_text"></h4>
+            <p class="text-xs text-secondary mb-0" id="edit_email_text"></p>
           </div>
         </div>
 
@@ -211,82 +208,7 @@
 
                 </tr>
                 </thead>
-                <tbody>
-
-                <tr>
-                  <td>
-                    <div class="d-flex px-2 py-1">
-
-                      <div class="d-flex flex-column justify-content-center">
-                        <p class="text-xs font-weight-bold mb-0">13868-002</p>
-                      </div>
-                    </div>
-                  </td>
-                  <td>
-                    <p class="text-xs font-weight-bold mb-0">SP</p>
-                  </td>
-                  <td>
-                    <p class="text-xs font-weight-bold mb-0">Aguaí</p>
-                  </td>
-                  <td class="align-middle text-center text-sm">
-                    <p class="text-xs font-weight-bold mb-0">Vila Nova</p>
-                  </td>
-                  <td class="align-middle text-center">
-                    <span class="text-secondary text-xs font-weight-bold">Eleodoro Matheus de Morães</span>
-                  </td>
-                  <td class="align-middle text-center">
-                    <span class="text-secondary text-xs font-weight-bold">Bloco A - 48</span>
-                  </td>
-                  <td class="align-middle text-center">
-                    <span class="text-secondary text-xs font-weight-bold">AP</span>
-                  </td>
-                  <td class="align-middle">
-                    <a class="cursor-pointer text-secondary font-weight-bold text-xs" data-bs-toggle="modal" data-bs-target="#modal-edit-user" onclick="updateUser(2)">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#737373" viewBox="0 0 256 256"><path d="M227.31,73.37,182.63,28.68a16,16,0,0,0-22.63,0L36.69,152A15.86,15.86,0,0,0,32,163.31V208a16,16,0,0,0,16,16H92.69A15.86,15.86,0,0,0,104,219.31L227.31,96a16,16,0,0,0,0-22.63ZM92.69,208H48V163.31l88-88L180.69,120ZM192,108.68,147.31,64l24-24L216,84.68Z"></path></svg>
-                    </a>
-                    <a class="cursor-pointer text-secondary font-weight-bold text-xs" data-bs-toggle="modal" data-bs-target="#modal-edit-user" onclick="updateUser(1)">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#CE0000" viewBox="0 0 256 256"><path d="M216,48H176V40a24,24,0,0,0-24-24H104A24,24,0,0,0,80,40v8H40a8,8,0,0,0,0,16h8V208a16,16,0,0,0,16,16H192a16,16,0,0,0,16-16V64h8a8,8,0,0,0,0-16ZM96,40a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8v8H96Zm96,168H64V64H192ZM112,104v64a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Zm48,0v64a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Z"></path></svg>
-                    </a>
-                  </td>
-                </tr>
-
-
-                <tr>
-                  <td>
-                    <div class="d-flex px-2 py-1">
-
-                      <div class="d-flex flex-column justify-content-center">
-                        <p class="text-xs font-weight-bold mb-0">13868-002</p>
-                      </div>
-                    </div>
-                  </td>
-                  <td>
-                    <p class="text-xs font-weight-bold mb-0">MG</p>
-                  </td>
-                  <td>
-                    <p class="text-xs font-weight-bold mb-0">Montes Claros</p>
-                  </td>
-                  <td class="align-middle text-center text-sm">
-                    <p class="text-xs font-weight-bold mb-0">Vila Regina</p>
-                  </td>
-                  <td class="align-middle text-center">
-                    <span class="text-secondary text-xs font-weight-bold">José Divino Lopes</span>
-                  </td>
-                  <td class="align-middle text-center">
-                    <span class="text-secondary text-xs font-weight-bold">45</span>
-                  </td>
-                  <td class="align-middle text-center">
-                    <span class="text-secondary text-xs font-weight-bold">Casa</span>
-                  </td>
-                  <td class="align-middle">
-                    <a class="cursor-pointer text-secondary font-weight-bold text-xs" data-bs-toggle="modal" data-bs-target="#modal-edit-user" onclick="updateUser(2)">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#737373" viewBox="0 0 256 256"><path d="M227.31,73.37,182.63,28.68a16,16,0,0,0-22.63,0L36.69,152A15.86,15.86,0,0,0,32,163.31V208a16,16,0,0,0,16,16H92.69A15.86,15.86,0,0,0,104,219.31L227.31,96a16,16,0,0,0,0-22.63ZM92.69,208H48V163.31l88-88L180.69,120ZM192,108.68,147.31,64l24-24L216,84.68Z"></path></svg>
-                    </a>
-                    <a class="cursor-pointer text-secondary font-weight-bold text-xs" data-bs-toggle="modal" data-bs-target="#modal-edit-user" onclick="updateUser(1)">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#CE0000" viewBox="0 0 256 256"><path d="M216,48H176V40a24,24,0,0,0-24-24H104A24,24,0,0,0,80,40v8H40a8,8,0,0,0,0,16h8V208a16,16,0,0,0,16,16H192a16,16,0,0,0,16-16V64h8a8,8,0,0,0,0-16ZM96,40a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8v8H96Zm96,168H64V64H192ZM112,104v64a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Zm48,0v64a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Z"></path></svg>
-                    </a>
-                  </td>
-                </tr>
+                <tbody id="lista_enderecos">
 
 
                 </tbody>
@@ -301,9 +223,7 @@
             <button class="btn btn-dark" data-bs-dismiss="modal">Salvar Mudanças</button>
           </div>
         </div>
-
       </div>
     </div>
   </div>
-
 </x-admin.layout_admin>
