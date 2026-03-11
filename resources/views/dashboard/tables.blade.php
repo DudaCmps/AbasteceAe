@@ -143,9 +143,11 @@
           </div>
         </div>
 
-        <div class="modal-body ms-3">
+        <form id="form-edit-user" class="text-start" method="POST">
+          @csrf
+          <input type="hidden" name="_method" value="PUT">
 
-          <form class="text-start">
+          <div class="modal-body ms-3">
 
             <div class="form-row-custom my-3">
 
@@ -212,7 +214,7 @@
 
             </div>
 
-          </form>
+
 
         </div>
 
@@ -223,17 +225,19 @@
           </div>
 
           <div class="d-flex gap-2">
-            <button class="btn btn-ligt-adapt text-dark border border-dark" data-bs-dismiss="modal">
+            <button type="button"
+                    class="btn btn-ligt-adapt text-dark border border-dark"
+                    data-bs-dismiss="modal">
               Cancelar
             </button>
 
-            <button class="btn btn-dark" data-bs-dismiss="modal">
+            <button type="submit" class="btn btn-dark">
               Salvar Mudanças
             </button>
           </div>
 
         </div>
-
+      </form>
       </div>
     </div>
   </div>

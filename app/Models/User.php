@@ -24,6 +24,7 @@ class User extends Authenticatable
         'registration',
         'cpf',
         'date_of_birth',
+        'is_active'
     ];
 
     /**

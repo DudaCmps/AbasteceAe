@@ -26,8 +26,8 @@ class UserRequest extends FormRequest
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|max:30',
             'registration' => 'required|string|max:10|unique:users',
-            'cpf' => 'required|string|max:14|unique:users|cpf',
-            'date_of_birth' => 'required|date',
+            'cpf' => 'string|max:14|unique:users|cpf',
+            'date_of_birth' => 'date',
         ];
     }
 
@@ -44,10 +44,8 @@ class UserRequest extends FormRequest
             'registration.required' => 'O campo matrícula é obrigatório.',
             'registration.max' => 'A matrícula deve ter no máximo 20 caracteres.',
             'registration.unique' => 'A matrícula já está em uso.',
-            'cpf.required' => 'O campo CPF é obrigatório.',
             'cpf.max' => 'O CPF deve ter no máximo 14 caracteres.',
             'cpf.unique' => 'O CPF já está em uso.',
-            'date_of_birth.required' => 'O campo data de nascimento é obrigatório.',
             'date_of_birth.date' => 'O campo data de nascimento deve ser uma data válida.',
         ];
     }

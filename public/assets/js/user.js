@@ -13,6 +13,8 @@ function getUser(id){
           $('#name_text').text(result.name);
           $('#email_text').text(result.email);
 
+          $('#form-edit-user').attr('action', `/admin/dashboard/update/${id}`);
+
           console.log(result);
         },
       error: function(result){
@@ -21,6 +23,7 @@ function getUser(id){
     })
 
 }
+
 function getAddresses(id){
 
   $.ajax({

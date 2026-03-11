@@ -38,7 +38,7 @@ Route::middleware('auth')->group(function () {
         // Rota para obter os endereços do usuário
         Route::get('admin/dashboard/{id}/enderecos', [EnderecoController::class, 'getAddresses']);
 
-        Route::post('admin/dashboard/{id}/editar', [UserController::class, 'update'])->name('admin.update');
+        Route::put('admin/dashboard/update/{id}', [UserController::class, 'update']);
     });
 });
 

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use App\Http\Requests\UserRequest;
 
 class UserController extends Controller
 {
@@ -40,7 +41,9 @@ class UserController extends Controller
      */
     public function update(UserRequest $request)
     {
-        dd($request);
+
+        User::find($request->id)->update($request->all());
+        return redirect()->back()->with('success', 'Usuário atualizado com sucesso!');
     }
 
     /**
